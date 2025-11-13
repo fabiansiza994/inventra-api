@@ -12,11 +12,15 @@ import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -96,5 +100,71 @@ public class UsuarioService implements IUserService {
 
     public Optional<User> getUserByEmail(String email) {
         return userRepository.findByEmail(email);
+    }
+
+    // Nuevo: búsqueda paginada de usuarios
+    @Override
+    public Page<UserDTO> findByName(String name, Pageable pageable) {
+        logger.info("** Finding users (non-admin) by name/username paginated: {} **", name);
+        final long ADMIN_ROLE_ID = 1L;
+        var page = userRepository.searchNonAdmin(name, ADMIN_ROLE_ID, pageable);
+
+        List<UserDTO> dtos = page.getContent().stream()
+                .map(user -> {
+                    UserDTO dto = modelMapper.map(user, UserDTO.class);
+                    dto.setPassword(null);
+                    return dto;
+                })
+                .toList();
+        return new PageImpl<>(dtos, pageable, page.getTotalElements());
+    }
+
+    @Override
+    public UserDTO findById(Long id) {
+        logger.info("** Finding user by id **");
+        var userOpt = userRepository.findById(id);
+        if (userOpt.isEmpty()) {
+            logger.error("** User not found **");
+            throw new CustomServiceException("123", "E001", "User not found");
+        }
+        var dto = modelMapper.map(userOpt.get(), UserDTO.class);
+        dto.setPassword(null);
+        return dto;
+    }
+
+    @Override
+    public UserDTO update(UserDTO userDTO, String uuid) {
+        logger.info("** Updating user **");
+        if (userDTO.getId() == null) {
+            throw new CustomServiceException(uuid, "E400", "User id is required");
+        }
+        var userDbOpt = userRepository.findById(userDTO.getId());
+        if (userDbOpt.isEmpty()) {
+            throw new CustomServiceException(uuid, "E001", "User not found");
+        }
+
+        var userDb = userDbOpt.get();
+        // Mantener username unique: si cambia, verificar duplicado
+        if (userDTO.getUsername() != null && !userDTO.getUsername().equalsIgnoreCase(userDb.getUsername())) {
+            var existsUsername = userRepository.findByUsername(userDTO.getUsername().toLowerCase().trim());
+            if (existsUsername.isPresent() && !existsUsername.get().getId().equals(userDb.getId())) {
+                throw new CustomServiceException(uuid, "E409", "User with that username already exists.");
+            }
+            userDb.setUsername(userDTO.getUsername().toLowerCase().trim());
+        }
+        // Actualizar campos simples si vienen
+        if (userDTO.getName() != null) userDb.setName(userDTO.getName());
+        if (userDTO.getEmail() != null) userDb.setEmail(userDTO.getEmail());
+        // Cambio de rol si viene
+        if (userDTO.getRole() != null && userDTO.getRole().getId() != null) {
+            var roleDto = roleService.findById(userDTO.getRole().getId());
+            userDb.setRole(modelMapper.map(roleDto, com.inventra.app.entity.Role.class));
+        }
+        // No actualizar password aquí (para seguridad), salvo que se implemente endpoint específico
+
+        var saved = userRepository.save(userDb);
+        var dto = modelMapper.map(saved, UserDTO.class);
+        dto.setPassword(null);
+        return dto;
     }
 }
