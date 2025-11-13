@@ -1,0 +1,167 @@
+2025-11-13T00:05:06.452-05:00  INFO 20144 --- [inventra] [main] com.inventra.app.InventraApplication     : Starting InventraApplication using Java 22.0.2 with PID 20144 (C:\Users\FMSP\Documents\Idea Projects\inventra\target\classes started by FMSP in C:\Users\FMSP\Documents\Idea Projects\inventra)
+2025-11-13T00:05:06.455-05:00  INFO 20144 --- [inventra] [main] com.inventra.app.InventraApplication     : The following 1 profile is active: "local"
+2025-11-13T00:05:07.720-05:00  INFO 20144 --- [inventra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T00:05:07.936-05:00  INFO 20144 --- [inventra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 193 ms. Found 7 JPA repository interfaces.
+2025-11-13T00:05:09.620-05:00  INFO 20144 --- [inventra] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-13T00:05:09.656-05:00  INFO 20144 --- [inventra] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T00:05:09.658-05:00  INFO 20144 --- [inventra] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-13T00:05:09.811-05:00  INFO 20144 --- [inventra] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T00:05:09.814-05:00  INFO 20144 --- [inventra] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3304 ms
+2025-11-13T00:05:10.231-05:00  INFO 20144 --- [inventra] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T00:05:10.401-05:00  INFO 20144 --- [inventra] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-13T00:05:10.488-05:00  INFO 20144 --- [inventra] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T00:05:11.151-05:00  INFO 20144 --- [inventra] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T00:05:11.220-05:00  INFO 20144 --- [inventra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T00:05:11.658-05:00  INFO 20144 --- [inventra] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bff28e7
+2025-11-13T00:05:11.662-05:00  INFO 20144 --- [inventra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T00:05:11.820-05:00  INFO 20144 --- [inventra] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-13T00:05:14.435-05:00  INFO 20144 --- [inventra] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T00:05:14.623-05:00  INFO 20144 --- [inventra] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T00:05:15.074-05:00  INFO 20144 --- [inventra] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-11-13T00:05:16.044-05:00  INFO 20144 --- [inventra] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-11-13T00:05:16.054-05:00  INFO 20144 --- [inventra] [main] com.inventra.app.InventraApplication     : Started InventraApplication in 10.311 seconds (process running for 11.249)
+2025-11-13T00:05:20.372-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-13T00:05:20.379-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-13T00:05:20.381-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-13T00:05:27.133-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.SalesService        : ** Updating sale status for id 8 to REJECTED **
+2025-11-13T00:05:31.048-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:05:31.052-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:05:31.061-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:05:31.076-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:05:37.475-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:05:37.612-05:00  WARN 20144 --- [inventra] [http-nio-8081-exec-7] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-13T00:05:39.813-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:05:49.502-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:05:55.867-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:08:16.141-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.UsuarioService      : ** Registering user **
+2025-11-13T00:08:16.163-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.UsuarioService      : ** Role 2 **
+2025-11-13T00:08:16.426-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.UsuarioService      : ** User registered **
+2025-11-13T00:08:54.372-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:08:57.785-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:09:05.370-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.inventra.app.service.impl.AuthService  : Login request received
+2025-11-13T00:09:05.370-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.UsuarioService      : ** Getting user by username **
+2025-11-13T00:09:05.377-05:00 ERROR 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.UsuarioService      : ** User not found **
+2025-11-13T00:09:06.698-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.inventra.app.service.impl.AuthService  : Login request received
+2025-11-13T00:09:06.700-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.UsuarioService      : ** Getting user by username **
+2025-11-13T00:09:06.707-05:00 ERROR 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.UsuarioService      : ** User not found **
+2025-11-13T00:09:12.152-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.inventra.app.service.impl.AuthService  : Login request received
+2025-11-13T00:09:12.152-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.UsuarioService      : ** Getting user by username **
+2025-11-13T00:09:12.154-05:00 ERROR 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.UsuarioService      : ** User not found **
+2025-11-13T00:09:16.428-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.inventra.app.service.impl.AuthService  : Login request received
+2025-11-13T00:09:16.428-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.UsuarioService      : ** Getting user by username **
+2025-11-13T00:09:16.434-05:00 ERROR 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.UsuarioService      : ** User not found **
+2025-11-13T00:09:23.442-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.inventra.app.service.impl.AuthService  : Login request received
+2025-11-13T00:09:23.448-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.UsuarioService      : ** Getting user by username **
+2025-11-13T00:09:23.453-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.UsuarioService      : ** User found **
+2025-11-13T00:09:23.847-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.inventra.app.service.impl.AuthService  : Login successful
+2025-11-13T00:09:23.955-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:09:23.972-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:09:23.972-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:09:23.980-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:09:30.176-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:09:30.184-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:09:30.192-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:09:30.197-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:09:38.785-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:09:42.175-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:11:29.974-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:11:29.988-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:11:29.996-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:11:29.998-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:11:32.012-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:11:32.021-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:11:34.269-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:11:34.272-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:11:35.133-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:11:59.583-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:12:07.781-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:12:23.930-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:12:23.938-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:12:25.121-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:12:25.121-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:12:25.126-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:12:25.136-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:12:39.512-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:12:39.516-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:12:47.088-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:13:06.837-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:13:06.854-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:06.856-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:13:06.858-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:21.937-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:13:21.937-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:21.937-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:21.954-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:13:24.307-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:24.315-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:26.250-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:13:26.250-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:26.255-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:26.264-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:13:30.907-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:30.913-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:35.447-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:35.447-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:13:35.449-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:35.461-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:13:36.576-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:13:36.582-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:36.587-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:36.589-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:13:52.454-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:52.462-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:13:57.255-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:13:57.266-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:14:00.510-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:14:00.524-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:14:00.527-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:14:00.530-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:14:02.434-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:14:02.436-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:14:05.566-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:14:05.566-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:14:05.570-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-5] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:14:05.579-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:14:26.034-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:14:26.045-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-7] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:14:27.980-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:14:27.980-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:14:27.990-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:14:27.995-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:14:33.230-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:14:39.949-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:14:51.556-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:14:51.562-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:15:21.495-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:15:21.499-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:15:37.212-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-2] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:15:44.819-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:15:44.824-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-6] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:15:46.111-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.ProductService      : ** Finding all products **
+2025-11-13T00:15:46.114-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:15:46.120-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:15:46.126-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.ProductService      : ** Products found: 5**
+2025-11-13T00:17:32.264-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:17:32.267-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-3] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:17:39.268-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:17:52.297-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-10] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:18:30.789-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Finding all categories **
+2025-11-13T00:18:30.797-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-1] c.i.app.service.impl.CategoryService     : ** Categories found: 3**
+2025-11-13T00:18:32.686-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-9] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:18:33.974-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-4] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:18:44.240-05:00  INFO 20144 --- [inventra] [http-nio-8081-exec-8] c.i.app.service.impl.SalesService        : ** Listing sales paginated. date filter: null **
+2025-11-13T00:22:34.070-05:00  INFO 20144 --- [inventra] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-13T00:22:34.077-05:00  INFO 20144 --- [inventra] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-13T00:22:34.085-05:00  INFO 20144 --- [inventra] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T00:22:34.085-05:00  INFO 20144 --- [inventra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-13T00:22:34.098-05:00  INFO 20144 --- [inventra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -14,4 +14,7 @@ public interface ISalesService {
 
     // Obtener detalle completo de una venta (productos vendidos con cantidad)
     SalesDto getSaleDetail(Long id);
+
+    // Actualizar el estado de una venta (por ejemplo: REJECTED)
+    void updateSaleStatus(Long id, String status);
 }

@@ -21,6 +21,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
 
 @Service
@@ -78,6 +79,7 @@ public class SalesService implements ISalesService {
 
         List<SalesDto> dtos = page.getContent().stream().map(sale -> {
             SalesDto dto = modelMapper.map(sale, SalesDto.class);
+            dto.setDate(Instant.parse(sale.getDate()));
             // obtener detalles de venta y mapear products con cantidad
             List<SaleDetail> details = saleDetailRepository.findBySaleId_Id(sale.getId());
             List<ProductDto> prodDtos = details.stream().map(detail -> {
@@ -146,8 +148,36 @@ public class SalesService implements ISalesService {
 
         logger.info("** Sale created **");
         salesDTO.setClient(client);
+        salesDTO.setDate(new java.util.Date().toInstant());
         salesDTO.setStatus("COMPLETE");
         return save(salesDTO);
+    }
+
+    @Transactional
+    @Override
+    public void updateSaleStatus(Long id, String status) {
+        logger.info("** Updating sale status for id {} to {} **", id, status);
+        var sale = salesRepository.findById(id)
+                .orElseThrow(() -> new CustomServiceException("123", "E010", "Venta con id " + id + " no encontrada"));
+
+        sale.setStatus(status);
+        salesRepository.save(sale);
+
+        if ("REJECTED".equalsIgnoreCase(status)) {
+            // recuperar detalles y devolver cantidad al stock
+            List<SaleDetail> details = saleDetailRepository.findBySaleId_Id(sale.getId());
+            for (SaleDetail d : details) {
+                if (d.getProductId() == null) continue;
+                Integer qty = d.getQuantity() == null ? 0 : d.getQuantity();
+                var prodOpt = productRepository.findById(d.getProductId().getId());
+                if (prodOpt.isPresent()) {
+                    var prod = prodOpt.get();
+                    Integer current = prod.getQuantity() == null ? 0 : prod.getQuantity();
+                    prod.setQuantity(current + qty);
+                    productRepository.save(prod);
+                }
+            }
+        }
     }
 
     @Override

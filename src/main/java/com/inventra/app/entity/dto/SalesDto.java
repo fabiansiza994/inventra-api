@@ -20,5 +20,5 @@ public class SalesDto {
     @NotBlank(message = "client is required")
     private ClientDto client;
     private List<ProductDto> productList;
-    private Instant date = new java.util.Date().toInstant();
+    private Instant date;
 }
